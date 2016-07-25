@@ -1,0 +1,352 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5BA28ADF1D3DC2F300E4AFEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA28ADE1D3DC2F300E4AFEA /* main.m */; };
+		5BA28AE21D3DC2F300E4AFEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA28AE11D3DC2F300E4AFEA /* AppDelegate.m */; };
+		5BA28AE51D3DC2F300E4AFEA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA28AE41D3DC2F300E4AFEA /* ViewController.m */; };
+		5BA28AE81D3DC2F300E4AFEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BA28AE61D3DC2F300E4AFEA /* Main.storyboard */; };
+		5BA28AEB1D3DC2F300E4AFEA /* JWDatePickerView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5BA28AE91D3DC2F300E4AFEA /* JWDatePickerView.xcdatamodeld */; };
+		5BA28AED1D3DC2F300E4AFEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BA28AEC1D3DC2F300E4AFEA /* Assets.xcassets */; };
+		5BA28AF01D3DC2F300E4AFEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BA28AEE1D3DC2F300E4AFEA /* LaunchScreen.storyboard */; };
+		5BA28AFA1D3DC32A00E4AFEA /* JWDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA28AF91D3DC32A00E4AFEA /* JWDatePickerView.m */; };
+		5BA28AFD1D3E10EE00E4AFEA /* KBDatePickerViewkeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA28AFC1D3E10EE00E4AFEA /* KBDatePickerViewkeyBoard.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5BA28ADA1D3DC2F300E4AFEA /* JWDatePickerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWDatePickerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BA28ADE1D3DC2F300E4AFEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5BA28AE01D3DC2F300E4AFEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5BA28AE11D3DC2F300E4AFEA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5BA28AE31D3DC2F300E4AFEA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5BA28AE41D3DC2F300E4AFEA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5BA28AE71D3DC2F300E4AFEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5BA28AEA1D3DC2F300E4AFEA /* JWDatePickerView.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JWDatePickerView.xcdatamodel; sourceTree = "<group>"; };
+		5BA28AEC1D3DC2F300E4AFEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BA28AEF1D3DC2F300E4AFEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5BA28AF11D3DC2F300E4AFEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BA28AF81D3DC32A00E4AFEA /* JWDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWDatePickerView.h; sourceTree = "<group>"; };
+		5BA28AF91D3DC32A00E4AFEA /* JWDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWDatePickerView.m; sourceTree = "<group>"; };
+		5BA28AFB1D3E10ED00E4AFEA /* KBDatePickerViewkeyBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBDatePickerViewkeyBoard.h; sourceTree = "<group>"; };
+		5BA28AFC1D3E10EE00E4AFEA /* KBDatePickerViewkeyBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBDatePickerViewkeyBoard.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5BA28AD71D3DC2F300E4AFEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5BA28AD11D3DC2F300E4AFEA = {
+			isa = PBXGroup;
+			children = (
+				5BA28ADC1D3DC2F300E4AFEA /* JWDatePickerView */,
+				5BA28ADB1D3DC2F300E4AFEA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5BA28ADB1D3DC2F300E4AFEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BA28ADA1D3DC2F300E4AFEA /* JWDatePickerView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BA28ADC1D3DC2F300E4AFEA /* JWDatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				5BA28AF71D3DC2FA00E4AFEA /* JWDatePickerView */,
+				5BA28AE01D3DC2F300E4AFEA /* AppDelegate.h */,
+				5BA28AE11D3DC2F300E4AFEA /* AppDelegate.m */,
+				5BA28AE31D3DC2F300E4AFEA /* ViewController.h */,
+				5BA28AE41D3DC2F300E4AFEA /* ViewController.m */,
+				5BA28AE61D3DC2F300E4AFEA /* Main.storyboard */,
+				5BA28AEC1D3DC2F300E4AFEA /* Assets.xcassets */,
+				5BA28AEE1D3DC2F300E4AFEA /* LaunchScreen.storyboard */,
+				5BA28AF11D3DC2F300E4AFEA /* Info.plist */,
+				5BA28AE91D3DC2F300E4AFEA /* JWDatePickerView.xcdatamodeld */,
+				5BA28ADD1D3DC2F300E4AFEA /* Supporting Files */,
+			);
+			path = JWDatePickerView;
+			sourceTree = "<group>";
+		};
+		5BA28ADD1D3DC2F300E4AFEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5BA28ADE1D3DC2F300E4AFEA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5BA28AF71D3DC2FA00E4AFEA /* JWDatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				5BA28AFB1D3E10ED00E4AFEA /* KBDatePickerViewkeyBoard.h */,
+				5BA28AFC1D3E10EE00E4AFEA /* KBDatePickerViewkeyBoard.m */,
+				5BA28AF81D3DC32A00E4AFEA /* JWDatePickerView.h */,
+				5BA28AF91D3DC32A00E4AFEA /* JWDatePickerView.m */,
+			);
+			path = JWDatePickerView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5BA28AD91D3DC2F300E4AFEA /* JWDatePickerView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BA28AF41D3DC2F300E4AFEA /* Build configuration list for PBXNativeTarget "JWDatePickerView" */;
+			buildPhases = (
+				5BA28AD61D3DC2F300E4AFEA /* Sources */,
+				5BA28AD71D3DC2F300E4AFEA /* Frameworks */,
+				5BA28AD81D3DC2F300E4AFEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JWDatePickerView;
+			productName = JWDatePickerView;
+			productReference = 5BA28ADA1D3DC2F300E4AFEA /* JWDatePickerView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5BA28AD21D3DC2F300E4AFEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = zhujianwei;
+				TargetAttributes = {
+					5BA28AD91D3DC2F300E4AFEA = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 4575Y5U33P;
+					};
+				};
+			};
+			buildConfigurationList = 5BA28AD51D3DC2F300E4AFEA /* Build configuration list for PBXProject "JWDatePickerView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5BA28AD11D3DC2F300E4AFEA;
+			productRefGroup = 5BA28ADB1D3DC2F300E4AFEA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BA28AD91D3DC2F300E4AFEA /* JWDatePickerView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5BA28AD81D3DC2F300E4AFEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BA28AF01D3DC2F300E4AFEA /* LaunchScreen.storyboard in Resources */,
+				5BA28AED1D3DC2F300E4AFEA /* Assets.xcassets in Resources */,
+				5BA28AE81D3DC2F300E4AFEA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5BA28AD61D3DC2F300E4AFEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BA28AE51D3DC2F300E4AFEA /* ViewController.m in Sources */,
+				5BA28AFA1D3DC32A00E4AFEA /* JWDatePickerView.m in Sources */,
+				5BA28AEB1D3DC2F300E4AFEA /* JWDatePickerView.xcdatamodeld in Sources */,
+				5BA28AE21D3DC2F300E4AFEA /* AppDelegate.m in Sources */,
+				5BA28AFD1D3E10EE00E4AFEA /* KBDatePickerViewkeyBoard.m in Sources */,
+				5BA28ADF1D3DC2F300E4AFEA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5BA28AE61D3DC2F300E4AFEA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BA28AE71D3DC2F300E4AFEA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5BA28AEE1D3DC2F300E4AFEA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BA28AEF1D3DC2F300E4AFEA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5BA28AF21D3DC2F300E4AFEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5BA28AF31D3DC2F300E4AFEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5BA28AF51D3DC2F300E4AFEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = JWDatePickerView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zjw.otherApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5BA28AF61D3DC2F300E4AFEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = JWDatePickerView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zjw.otherApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5BA28AD51D3DC2F300E4AFEA /* Build configuration list for PBXProject "JWDatePickerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BA28AF21D3DC2F300E4AFEA /* Debug */,
+				5BA28AF31D3DC2F300E4AFEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BA28AF41D3DC2F300E4AFEA /* Build configuration list for PBXNativeTarget "JWDatePickerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BA28AF51D3DC2F300E4AFEA /* Debug */,
+				5BA28AF61D3DC2F300E4AFEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5BA28AE91D3DC2F300E4AFEA /* JWDatePickerView.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5BA28AEA1D3DC2F300E4AFEA /* JWDatePickerView.xcdatamodel */,
+			);
+			currentVersion = 5BA28AEA1D3DC2F300E4AFEA /* JWDatePickerView.xcdatamodel */;
+			path = JWDatePickerView.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5BA28AD21D3DC2F300E4AFEA /* Project object */;
+}
