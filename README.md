@@ -12,6 +12,37 @@ JWDatePickerMode_DateAndTimeRSecond,// 年月日  时 分
 JWDatePickerMode_DateAndTimeRYearAndSecond//月日 时 分   
 ```
 
+
+====介绍：通过代理指定单位
+```
+-(NSString *)datePickerView:(JWDatePickerView *)datePickerView unitForCalendarUnit:(NSCalendarUnit)calendarUnit
+{
+
+switch (calendarUnit) {
+case NSCalendarUnitYear:
+return @"年";
+break;
+case NSCalendarUnitMonth:
+return @"月";
+break;
+case NSCalendarUnitDay:
+return @"日";
+break;
+case NSCalendarUnitHour:
+return @"时";
+break;
+case NSCalendarUnitMinute:
+return @"分";
+break;
+case NSCalendarUnitSecond:
+return @"秒";
+break;
+default:
+break;
+}
+return @" ";
+}
+```
 ====演示
 <br>
 ![](https://github.com/GitHubOfJW/JWDatePickerView/blob/master/Source/PickerView.gif)  
