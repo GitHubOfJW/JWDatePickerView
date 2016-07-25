@@ -11,3 +11,6 @@ JWDatePickerMode_DateAddHour,// 年 月 日 时
 JWDatePickerMode_DateAndTimeRSecond,// 年月日  时 分  
 JWDatePickerMode_DateAndTimeRYearAndSecond//月日 时 分   
 ```
+
+====演示
+![](https://github.com/GitHubOfJW/JWDatePickerView/blob/master/Source/PickerView.gif)  
