@@ -6,6 +6,7 @@
 JWDatePickerMode_DateAndTime,// 年月日 时 分 秒 
 JWDatePickerMode_DateAndTimeRYear,//  月日 时 分 秒  
 JWDatePickerMode_Time,// 时分秒   
+JWDatePickerMode_TimeRSecond,//时分
 JWDatePickerMode_Date,// 年月日  
 JWDatePickerMode_DateAddHour,// 年 月 日 时  
 JWDatePickerMode_DateAndTimeRSecond,// 年月日  时 分  
