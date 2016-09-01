@@ -98,6 +98,9 @@
     //返回对应模式下的compsCount
     if (self.pickerMode==JWDatePickerMode_DateAndTime||self.pickerMode==JWDatePickerMode_DateAndTimeRYear||self.pickerMode==JWDatePickerMode_DateAddHour) {
         return 4;
+    }else if (self.pickerMode==JWDatePickerMode_TimeRSecond)
+    {
+        return 2;
     }
     return 3;
 }
@@ -106,6 +109,9 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
     NSArray* groupUnitArray  = self.modeDict[@(self.pickerMode)];
+    if (component>=groupUnitArray.count) {
+        return 0;
+    }
     NSNumber* number =  [groupUnitArray[component] lastObject];
     
     switch (number.unsignedIntegerValue) {
@@ -159,6 +165,9 @@
     
     NSArray* groupUnitArray  = self.modeDict[@(self.pickerMode)];
     
+    if (component>=groupUnitArray.count) {
+        return @"";
+    }
     NSNumber* number =  [groupUnitArray[component] lastObject];
     
     switch (number.unsignedIntegerValue) {
@@ -236,7 +245,7 @@
             NSDateComponents* comps = [self.calendar components:KComUnit fromDate:date];
 
              [m_str appendFormat:@"%@%@",[NSString stringWithFormat:@"%02zd",comps.year],self.unitStrDict[@(NSCalendarUnitYear)]];
-        }else if (self.pickerMode == JWDatePickerMode_Time)//前面拼接 年月日
+        }else if (self.pickerMode == JWDatePickerMode_Time||self.pickerMode==JWDatePickerMode_TimeRSecond)//前面拼接 年月日
         {
             //同年可用
             NSDateComponents* comps = [self.calendar components:KComUnit fromDate:[self getMinDate]];
@@ -622,7 +631,7 @@
             if ([lastMaxDate compare:self.maxDate]==NSOrderedAscending) {
                 self.maxDate = lastMaxDate;
             }
-        }else if (self.pickerMode==JWDatePickerMode_Time)//同一天
+        }else if (self.pickerMode==JWDatePickerMode_Time||self.pickerMode==JWDatePickerMode_TimeRSecond)//同一天
         {
             NSDate* lastMaxDate =  [self getDayLastDateWithDate:self.minDate max:YES];
             if ([lastMaxDate compare:self.maxDate]==NSOrderedAscending) {
@@ -671,7 +680,7 @@
             if ([lastMinDate compare:self.minDate]==NSOrderedDescending) {
                 self.minDate = lastMinDate;
             }
-        }else if (self.pickerMode==JWDatePickerMode_Time)//同一天
+        }else if (self.pickerMode==JWDatePickerMode_Time||self.pickerMode ==JWDatePickerMode_TimeRSecond)//同一天
         {
             NSDate* lastMinDate =  [self getDayLastDateWithDate:self.maxDate max:NO];
             if ([lastMinDate compare:self.minDate]==NSOrderedDescending) {
@@ -716,6 +725,10 @@
         
         //        JWDatePickerMode_Time,// 时分秒
         _modeDict[@(JWDatePickerMode_Time)]= @[@[@(NSCalendarUnitHour)],@[@(NSCalendarUnitMinute)],@[@(NSCalendarUnitSecond)]];
+        
+        
+        //        JWDatePickerMode_TimeRSecond,// 时分
+        _modeDict[@(JWDatePickerMode_TimeRSecond)]= @[@[@(NSCalendarUnitHour)],@[@(NSCalendarUnitMinute)]];
         
         //        JWDatePickerMode_Date,// 年月日
         _modeDict[@(JWDatePickerMode_Date)]= @[@[@(NSCalendarUnitYear)],@[@(NSCalendarUnitMonth)],@[@(NSCalendarUnitDay)]];
@@ -803,7 +816,7 @@
     NSString* sourceFormatter =  @"";
     if (self.pickerMode==JWDatePickerMode_DateAndTimeRYear||self.pickerMode==JWDatePickerMode_DateAndTimeRYearAndSecond) {//前面拼 年
         sourceFormatter = [NSString stringWithFormat:@"yyyy%@",self.unitStrDict[@(NSCalendarUnitYear)]];
-    }else if (self.pickerMode == JWDatePickerMode_Time)//前面拼接 年月日
+    }else if (self.pickerMode == JWDatePickerMode_Time||self.pickerMode==JWDatePickerMode_TimeRSecond)//前面拼接 年月日
     {
         sourceFormatter =[NSString stringWithFormat:@"yyyy%@MM%@dd%@%@",self.unitStrDict[@(NSCalendarUnitYear)],self.unitStrDict[@(NSCalendarUnitMonth)],self.unitStrDict[@(NSCalendarUnitDay)],KSplit];
     }
@@ -831,7 +844,7 @@
                 addComps.year = -1;
                 addComps.day = 1;
                 self.minDate  = [self.calendar dateByAddingComponents:addComps toDate:self.maxDate options:NSCalendarMatchLast];
-            }else if (self.pickerMode==JWDatePickerMode_Time)//同一天
+            }else if (self.pickerMode==JWDatePickerMode_Time||self.pickerMode==JWDatePickerMode_TimeRSecond)//同一天
             {
                 self.minDate  = [self getDayLastDateWithDate:self.maxDate max:NO];
             }
@@ -859,7 +872,7 @@
             addComps.year = 1;
             addComps.day = -1;
             _maxDate =  [self.calendar dateByAddingComponents:addComps toDate:[self getMinDate] options:NSCalendarMatchLast];
-        }else if (self.pickerMode==JWDatePickerMode_Time)//同一天
+        }else if (self.pickerMode==JWDatePickerMode_Time||self.pickerMode==JWDatePickerMode_TimeRSecond)//同一天
         {
             _maxDate  = [self getDayLastDateWithDate:self.minDate max:YES];
         }
@@ -918,7 +931,7 @@
                 self.maxDate = lastMaxDate;
                 [self.pickerView reloadAllComponents];
             }
-        }else if (self.pickerMode==JWDatePickerMode_Time)//同一天
+        }else if (self.pickerMode==JWDatePickerMode_Time||self.pickerMode==JWDatePickerMode_TimeRSecond)//同一天
         {
             NSDate* lastMaxDate =  [self getDayLastDateWithDate:self.minDate max:YES];
             

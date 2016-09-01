@@ -14,6 +14,7 @@ typedef NS_ENUM(NSUInteger,JWDatePickerMode)
     JWDatePickerMode_DateAndTime,// 年月日 时 分 秒  4
     JWDatePickerMode_DateAndTimeRYear,//  月日 时 分 秒 4
     JWDatePickerMode_Time,// 时分秒  3
+    JWDatePickerMode_TimeRSecond,//时分 2
     JWDatePickerMode_Date,// 年月日  3
     JWDatePickerMode_DateAddHour,// 年 月 日 时  4
     JWDatePickerMode_DateAndTimeRSecond,// 年月日  时 分 3
