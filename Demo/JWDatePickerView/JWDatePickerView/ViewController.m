@@ -35,7 +35,7 @@
    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"切换模式" style:(UIBarButtonItemStyleDone) target:self action:@selector(change)];
     
-//    [self.view addSubview:self.pickerView];
+    [self.view addSubview:self.pickerView];
     
     [self.view addSubview:self.txtField];
 }
@@ -164,8 +164,8 @@
     self.keyboard.pickerView.pickerMode = JWDatePickerMode_TimeRSecond;
     self.keyboard.pickerView.minDate = [NSDate date];
     
-//    self.keyboard.pickerView.date = date;
-//    self.keyboard.pickerView.maxDate = [self.keyboard.pickerView getDayLastDateWithDate:date max:YES]; //maxDate;
+    self.keyboard.pickerView.date = date;
+    self.keyboard.pickerView.maxDate = [self.keyboard.pickerView getDayLastDateWithDate:date max:YES]; //maxDate;
     
 //    self.pickerView.minDate = setDate;
 //    self.pickerView.date = date;

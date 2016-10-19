@@ -28,7 +28,7 @@
 /**
  *  modeDict
  */
-@property(nonatomic,strong)NSMutableDictionary* modeDict;
+@property(nonatomic,strong)NSMutableDictionary<NSNumber*,NSArray*>* modeDict;
 /**
  *  formatterDict
  */
@@ -96,13 +96,14 @@
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
     //返回对应模式下的compsCount
-    if (self.pickerMode==JWDatePickerMode_DateAndTime||self.pickerMode==JWDatePickerMode_DateAndTimeRYear||self.pickerMode==JWDatePickerMode_DateAddHour) {
-        return 4;
-    }else if (self.pickerMode==JWDatePickerMode_TimeRSecond)
-    {
-        return 2;
-    }
-    return 3;
+//    if (self.pickerMode==JWDatePickerMode_DateAndTime||self.pickerMode==JWDatePickerMode_DateAndTimeRYear||self.pickerMode==JWDatePickerMode_DateAddHour) {
+//        return 4;
+//    }else if (self.pickerMode==JWDatePickerMode_TimeRSecond)
+//    {
+//        return 2;
+//    }
+//    return 3;
+    return   [self.modeDict objectForKey:@(self.pickerMode)].count;
 }
 
 
@@ -716,7 +717,7 @@
 /**
  *  字典
  */
--(NSMutableDictionary *)modeDict
+-(NSMutableDictionary<NSNumber*,NSArray*>*)modeDict
 {
     if (_modeDict==nil) {
         _modeDict =  [NSMutableDictionary dictionary];
