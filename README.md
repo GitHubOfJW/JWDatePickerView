@@ -1,7 +1,26 @@
 # JWDatePickerView
 
 
-====介绍：本控件是为了扩展苹果的日历控件而编写，主要提供8 个模式
+====介绍：本控件是为了扩展苹果的日历控件而编写，
+
+swift版本提供 10 个模式
+```
+public enum JWDatePickerMode:Int{
+
+case dateAndTime// 年月日  时  分  秒
+case dateAndHour// 年月日  时
+case dateAndTimeRYear// 月日 时 分 秒
+case time//  时 分 秒
+case timeRSecond//  时 分
+case date// 年   月   日
+case dateAddHour// 年 月 日  时
+case dateAndTimeRSecond// 年月日  时  分
+case dateAndTimeRYearAndSecond// 月日  时  分   3
+case dateAndTimeForAllComponent// 年 月  日  时  分 秒
+}
+```
+
+OC版本主要提供8 个模式
 ```
 JWDatePickerMode_DateAndTime,// 年月日 时 分 秒 
 JWDatePickerMode_DateAndTimeRYear,//  月日 时 分 秒  
