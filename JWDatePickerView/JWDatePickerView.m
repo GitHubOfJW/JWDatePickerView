@@ -332,30 +332,19 @@
 -(NSDate*)getRoundDateWithDate:(NSDate*)date
 {
     NSDateComponents *com  = [self.calendar components:KComUnit fromDate:date];
-     
+    
     NSInteger day = com.day;
-
-    NSInteger hour = com.hour;
-    
-    NSInteger addMinute = 0;
+    NSInteger hour = (com.hour%KHourSpace?com.hour/KHourSpace+1:com.hour/KHourSpace)*KHourSpace;
+    NSInteger minute = (com.minute%KMinuteSpace?com.minute/KMinuteSpace+1:com.minute/KMinuteSpace)*KMinuteSpace;
     
     
-    NSInteger second =  (com.second%self.secondSpace?com.second/self.secondSpace+1:com.second/self.secondSpace)*self.secondSpace;
-   
-    if (second>(60-self.secondSpace)) {//进分钟
-        second = 0;
-        addMinute = 1;
-    }
+    NSDateComponents* dateAdd = [[NSDateComponents alloc] init];
+    dateAdd.minute = minute - com.minute;
+    dateAdd.hour =  hour - com.hour;
+    dateAdd.day = day - com.day;
     
-    NSInteger minute =  ((com.minute+addMinute)%self.minuteSpace?(com.minute+addMinute)/self.minuteSpace+1:(com.minute+addMinute)/self.minuteSpace)*self.minuteSpace;
     
-    NSDateComponents*coms = [[NSDateComponents alloc] init];
-    coms.day = day-com.day;
-    coms.hour =  hour-com.hour;
-    coms.minute =  minute-com.minute;
-    coms.second =  second-com.second;
-    NSDate *newDate = [self.calendar dateByAddingComponents:coms toDate:date options:NSCalendarMatchLast];
-    return newDate;
+    return [self.calendar dateByAddingComponents:dateAdd toDate:date options:0];
 }
 
  
